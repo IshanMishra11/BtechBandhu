@@ -1,0 +1,230 @@
+header {
+    .container {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      h1 {
+        font-size: 2em;
+        text-transform: uppercase;
+        font-family: 'Gambetta', serif;
+        letter-spacing: -3px;
+        transition: 700ms ease;
+        font-variation-settings: "wght" 311;
+        margin-bottom: 0.8rem;
+        color: PaleGoldenRod;
+        outline: none;
+        text-align: center;
+      }
+      
+      h1:hover {
+        font-variation-settings: "wght" 582; 
+        letter-spacing: 1px;
+      }
+      
+      p {
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: MintCream;
+        letter-spacing: .5px;
+      }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #0f0e0e;
+}
+h1 {
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.semester-container {
+    display: flex; /* Arrange semesters horizontally */
+    flex-wrap: wrap; /* Allow semesters to wrap to next line if needed */
+    margin: 10px 0; /* Add some margin */
+}
+
+.semester {
+    flex: 1 0 20%; /* Each semester takes 20% width */
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+.semester:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-search-btn 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-semester {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .semester:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+h2 {
+    margin-bottom: 10px; /* Add some margin below semester heading */
+    color: #98e7f8;
+}
+
+#semestersubject {
+    color: #131414;
+    background: #98e7f8;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#playlist-container {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 20%;
+    text-align: center;
+    margin-left: 40%;
+    border-radius: 10px;
+    background-color: #252827;
+}
+#playlist-container a {
+    color: #00d5ff;
+    text-decoration: none;
+    font-weight: bold;
+    
+    
+}
+select ,
+/* CSS */
+.search-btn {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 30px;
+  }
+  .search-btn:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-search-btn 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-search-btn {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .search-btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+select {
+    width: 100%; /* Make the select element fill the available space */
+}
+
+
